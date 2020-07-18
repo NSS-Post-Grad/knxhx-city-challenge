@@ -5,7 +5,6 @@ from django.urls import reverse
 class Neighborhood_org(models.Model):
 
     name = models.CharField(max_length=255)
-    neighborhood = models.CharField(max_length=255)
     org_type = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     boundary = models.CharField(max_length=255)
