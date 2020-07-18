@@ -21,6 +21,9 @@ local_settings.py
 cityDataEnv/
 .vscode
 
+# django migrations
+migrations
+
 .DS_Store
 *.sqlite3
 media/
