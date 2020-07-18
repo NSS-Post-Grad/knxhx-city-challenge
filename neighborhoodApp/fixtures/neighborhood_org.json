@@ -1,0 +1,86 @@
+[
+    {
+        "model": "neighborhoodApp.neighborhood_org",
+        "pk": 1,
+        "fields": {
+            "name": "Colonial Village Neighborhood Association",
+            "org_type": "Neighborhood Association",
+            "is_active": "True",
+            "email": "jsharr2@bellsouth.net",
+            "district": 1,
+            "boundary": "South",
+            "website": "http://www.colonialvillage.org/",
+            "facebook": "https://www.facebook.com/ColonialVillageNeighborhoodAssociation/",
+            "last_updated": "",
+            "notes": "",
+            "location": "South Knoxville Church of God - 5623 Magazine Road",
+            "time": "7:00PM",
+            "day": "Thursday",
+            "week": "2nd",
+            "frequency": "Once a month"
+        }
+    },
+    {
+        "model": "neighborhoodApp.neighborhood_org",
+        "pk": 2,
+        "fields": {
+            "name": "Island Home Park Neighborhood Association",
+            "org_type": "Neighborhood Association",
+            "is_active": "False",
+            "email": "eancampbell@gmail.com",
+            "district": 1,
+            "boundary": "South",
+            "website": "http://ihpna.net/",
+            "facebook": "https://www.facebook.com/pages/category/Community/Island-Home-Park-Neighborhood-269539954797/",
+            "last_updated": "",
+            "notes": "Not meeting due to COVID-19",
+            "location": "",
+            "time": "",
+            "day": "",
+            "week": "",
+            "frequency": ""
+        }
+    },
+    {
+        "model": "neighborhoodApp.neighborhood_org",
+        "pk": 3,
+        "fields": {
+            "name": "Seven Springs Home Owners Association",
+            "org_type": "Home Owners Association",
+            "is_active": "False",
+            "email": "sevenspringsHOA@gmail.com",
+            "district": 3,
+            "boundary": "West",
+            "website": "www.sevenspringshoa.com",
+            "facebook": "",
+            "last_updated": "",
+            "notes": "",
+            "location": "",
+            "time": "",
+            "day": "",
+            "week": "",
+            "frequency": ""
+        }
+    },
+    {
+        "model": "neighborhoodApp.neighborhood_org",
+        "pk": 4,
+        "fields": {
+            "name": "Tatewood Neighborhood Watch",
+            "org_type": "Neighborhood Watch",
+            "is_active": "True",
+            "email": "tatewoodneighborhoodwatch@gmail.com",
+            "district": 4,
+            "boundary": "North",
+            "website": "",
+            "facebook": "",
+            "last_updated": "",
+            "notes": "",
+            "location": "123 Tatewood Street",
+            "time": "8:00PM",
+            "day": "Tuesday",
+            "week": "1st",
+            "frequency": "Biweekly"
+        }
+    }
+]
