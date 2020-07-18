@@ -1,0 +1,70 @@
+[
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 1,
+        "fields": {
+            "first_name": "Alyssa",
+            "last_name": "Nycum",
+            "organization_position": "Member",
+            "email": "alyssa@gmail.com",
+            "phone": 6159538643,
+            "address_1": "123 North Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37901,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 1
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 2,
+        "fields": {
+            "first_name": "Matt",
+            "last_name": "Kroeger",
+            "organization_position": "Member",
+            "email": "matt@gmail.com",
+            "phone": 6157351298,
+            "address_1": "123 South Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37902,
+            "is_subscribed": "False",
+            "neighborhood_org_id": 2
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 3,
+        "fields": {
+            "first_name": "Katie",
+            "last_name": "Wohl",
+            "organization_position": "Organizer",
+            "email": "katie@gmail.com",
+            "phone": 6152239709,
+            "address_1": "123 West Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37912,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 3
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 4,
+        "fields": {
+            "first_name": "Cooper",
+            "last_name": "Nichols",
+            "organization_position": "Member",
+            "email": "cooper@gmail.com",
+            "phone": 6154456787,
+            "address_1": "123 East Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37909,
+            "is_subscribed": "False",
+            "neighborhood_org_id": 4
+        }
+    }
+]

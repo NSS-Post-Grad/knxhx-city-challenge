@@ -13,6 +13,7 @@ class Resident(models.Model):
     zip_code = models.IntegerField()
     address_1 = models.CharField(max_length=255)
     address_2 = models.CharField(max_length=255, null=True, blank=True, default=None)
+    city_state = models.CharField(max_length=255, null=True, blank=True, default=None)
     is_subscribed = models.BooleanField()
     neighborhood_org_id = models.ForeignKey(Neighborhood_org, on_delete=models.CASCADE)
 
