@@ -6,3 +6,4 @@ from .neighborhoods.details import neighborhood_details
 from .residents.mail_list import mail_list
 from .residents.details import resident_details
 from .residents.list import resident_list
+from .residents.form import resident_form

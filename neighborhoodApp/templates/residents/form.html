@@ -1,0 +1,59 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+
+    <h1>Add a New Resident</h1>
+
+    <form action="{% url 'neighborhoodApp:residents' %}" method="post">
+        {% csrf_token %}
+
+        <fieldset>
+            <label for="first_name">First Name: </label>
+            <input required id="first_name" type="text" name="first_name">
+        </fieldset>
+        <fieldset>
+            <label for="last_name">Last Name: </label>
+            <input required id="last_name" type="text" name="last_name">
+        </fieldset>
+        <fieldset>
+            <label for="email">Email: </label>
+            <input required id="email" type="text" min="1" name="email">
+        </fieldset>
+        <fieldset>
+            <label for="phone">Phone Number: </label>
+            <input required id="phone" type="number" name="phone">
+        </fieldset>
+        <fieldset>
+            <label for="address_1">Address 1: </label>
+            <input required id="address_1" type="text" name="address_1">
+        </fieldset>
+        <fieldset>
+            <label for="address_2">Address 2: </label>
+            <input id="address_2" type="text" name="address_2">
+        </fieldset>
+        <fieldset>
+            <label for="city_state">City, State: </label>
+            <input required id="city_state" type="text" name="city_state" value="{{city_state}}">
+        </fieldset>
+        <fieldset>
+            <label for="zip_code">Zip Code: </label>
+            <input required id="zip_code" type="number" name="zip_code">
+        </fieldset>
+        <input type="hidden" name="neighborhood_org_id" value={{org.id}}>
+        <fieldset>
+            <label for="organization_position">Organization Position: </label>
+            <input required id="organization_position" type="text" name="organization_position">
+        </fieldset>
+        <fieldset>
+            <label for="subscription">Subscribe to Knoxville City newsletter?: </label><br>
+            <input type="radio" id="yes" name="subscription" value="yes" checked>
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="subscription" value="no">
+            <label for="no">No</label><br>
+        </fieldset>
+        
+
+        <input type="submit" value="Add" />
+    </form>
+
+{% endblock content %}

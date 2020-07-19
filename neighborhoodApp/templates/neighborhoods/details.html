@@ -8,6 +8,12 @@
     <div>
         <h3>(District {{org.district}})</h3>
         </br>
+        <div>
+            <form action="{% url 'neighborhoodApp:resident_form' org.id %}" method="get">
+                <button type="submit">Add Resident</button>
+            </form>
+        </div>
+        </br>
         <section>
             <p>Reach us at:</p>
             <p><a target="_blank" href="mailto:{{org.email}}">{{org.email}}</a></p>
