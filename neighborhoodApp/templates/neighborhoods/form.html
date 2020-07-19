@@ -1,0 +1,111 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+
+    <h1>Add a New Neighborhood</h1>
+
+
+    <form action="{% url 'neighborhoodApp:neighborhoods' %}" method="post">
+        {% csrf_token %}
+      
+        <fieldset>
+            <label for="name">Name: </label>
+            <input required id="name" type="text" name="name">
+        </fieldset>
+        <fieldset>
+            <label for="org_type">Organization Type: </label>
+            <select required name="org_type" id="org_type">
+                <option value="" disabled selected>Select</option>
+                <option value="Homeowner Association">Homeowner Association</option>
+                <option value="Neighborhood Association">Neighborhood Association</option>
+                <option value="Neighborhood Watch">Neighborhood Watch</option>
+                <option value="Town Hall">Town Hall</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="boundary">Boundary: </label>
+            <select required name="boundary" id="boundary">
+                <option value="" disabled selected>Select</option>
+                <option value="North">North</option>
+                <option value="South">South</option>
+                <option value="East">East</option>
+                <option value="West">West</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label for="district">District: </label>
+            <input required id="district" type="number" min="1" name="district">
+        </fieldset>
+        <fieldset>
+            <label for="email">Email: </label>
+            <input required id="email" type="text" name="email">
+        </fieldset>
+        <fieldset>
+            <label for="website">Website: </label>
+            <input id="website" type="text" name="website">
+        </fieldset>
+        <fieldset>
+            <label for="facebook">Facebook: </label>
+            <input id="facebook" type="text" name="facebook">
+        </fieldset>
+        <fieldset>
+            <label for="notes">Notes: </label>
+            <textarea id="notes" name="notes"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="meeting">Actively Meeting: </label><br>
+            <input type="radio" id="yes" name="meeting" value="yes" onClick="show()">
+            <label for="yes">Yes</label><br>
+            <input type="radio" id="no" name="meeting" value="no" checked onClick="hide()">
+            <label for="no">No</label><br>
+        </fieldset>
+        <div id="meeting_info" class="hidden">
+            <fieldset>
+                <label for="location">Location: </label>
+                <input id="location" type="text" name="location">
+            </fieldset>
+            <fieldset>
+                <label for="time">Time: </label>
+                <input id="time" type="time" name="time">
+            </fieldset>
+            <fieldset>
+                <label for="day">Day: </label>
+                <select name="day" id="day">
+                    <option value="" selected>Select</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <label for="week">Week: </label>
+                <input id="week" type="text" name="week">
+            </fieldset>
+            <fieldset>
+                <label for="frequency">Frequency: </label>
+                <input id="frequency" type="text" name="frequency">
+            </fieldset>
+        </div>
+
+        <input type="submit" value="Add" />
+    </form>
+
+{% block javascript %}
+    <script>
+
+    function show(){
+        document.getElementById("meeting_info").classList.remove("hidden")
+    }
+
+    function hide(){
+        document.getElementById("meeting_info").classList.add("hidden")
+    }
+
+    </script>
+{% endblock %}
+
+{% endblock content %}
