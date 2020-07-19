@@ -1,12 +1,12 @@
 {% extends 'shared/base.html' %}
 
 {% block content %}
-    <div><h1>City of Knoxville</h1></div>
+    <div><h3>City of Knoxville</h3></div>
     </br>
-    <div><h2>Newsletter Mailing List</h2></div>
+    <div><h4>Newsletter Mailing List</h4></div>
     </br>
     <div>
-        <h3>Contacts:</h3>
+        <h5>Contacts:</h5>
         {% for resident in mail %}
             {% if resident.address_2 %}
                 <p>{{resident.first_name}} {{resident.last_name}} - {{resident.address_1}} {{resident.address_2}}, {{resident.city_state}} {{resident.zip_code}}</p>

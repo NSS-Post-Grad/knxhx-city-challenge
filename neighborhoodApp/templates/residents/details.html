@@ -1,22 +1,22 @@
 {% extends 'shared/base.html' %}
 
 {% block content %}
-    <div><h1>City of Knoxville</h1></div>
+    <div><h3>City of Knoxville</h3></div>
     </br>
-    <div><h2>{{resident.first_name}} {{resident.last_name}}</h2></div>
+    <div><h4>{{resident.first_name}} {{resident.last_name}}</h4></div>
 
     <div>
         </br>
         <section>
-            <h3>{{resident.organization_position}} of: </h3>
+            <h5>{{resident.organization_position}} of: </h5>
             <p>{{org}}</p>
             </br>
-             <h3>Contact info:</h3>
+             <h5>Contact info:</h5>
              <p><a target="_blank" href="mailto:{{resident.email}}">{{resident.email}}</a></p>
              <p>{{resident.phone}}</p>
         </section>
         </br>
-        <h3>Subscription:</h3>
+        <h5>Subscription:</h5>
         <p>{{subscribed}}</p>
         </br>
         <form action="{% url 'neighborhoodApp:residents' %}" method="get">

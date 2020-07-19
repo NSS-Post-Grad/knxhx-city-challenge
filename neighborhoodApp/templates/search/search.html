@@ -2,13 +2,13 @@
 
 {% block content %}
 
-    <h1>City of Knoxville</h1>
+    <h3>City of Knoxville</h3>
     </br>
-    <h2>Search</h2>
+    <h4>Search</h4>
     </br>
     <form action="{% url 'neighborhoodApp:search' %}" method="get">
         {% csrf_token %}
-    <h3>What do you want to search by?</h3>
+    <h5>What do you want to search by?</h5>
     </br>
     <select required id="search" name="search">
         <option value="" disabled selected>Select</option>
