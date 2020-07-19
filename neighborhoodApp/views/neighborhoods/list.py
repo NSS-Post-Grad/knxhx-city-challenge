@@ -25,14 +25,26 @@ def neighborhood_list(request):
         if (meeting == "yes"):
             is_active = True
 
+        web = form_data['website']
+        if (web):
+            slc_web = ('').join(web[:4])
+            if(slc_web != "http"):
+                web = "https://"+web
+
+        fb = form_data['facebook']
+        if (fb):
+            slc_fb = ('').join(fb[:4])
+            if(slc_fb != "http"):
+                fb = "https://"+fb
+
 
         new_neighborhood = Neighborhood_org()
         new_neighborhood.name = form_data['name']
         new_neighborhood.org_type = form_data['org_type']
         new_neighborhood.email = form_data['email']
         new_neighborhood.boundary = form_data['boundary']
-        new_neighborhood.website = form_data['website']
-        new_neighborhood.facebook = form_data['facebook']
+        new_neighborhood.website = web
+        new_neighborhood.facebook = fb
         new_neighborhood.district = form_data['district']
         new_neighborhood.notes = form_data['notes']
         new_neighborhood.location = form_data['location']

@@ -20,9 +20,10 @@ class Resident(models.Model):
     class Meta:
         verbose_name = ("Resident")
         verbose_name_plural = ("Residents")
+        ordering = (F('last_name').asc(nulls_last=True),)
 
     def __str__(self):
-        return f"{self.name}"
+        return f"{self.first_name} {self.last_name}"
 
     def get_absolute_url(self):
         return reverse("success", kwargs={"pk": self.pk})
