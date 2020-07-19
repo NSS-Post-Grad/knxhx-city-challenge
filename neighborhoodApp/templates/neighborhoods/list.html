@@ -1,0 +1,19 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+    <div><h1>City of Knoxville</h1></div>
+
+    <div><h2>Neighborhood Directory</h2></div>
+
+    <div>
+        {% for area in areas %}
+            <h3>{{area}} Knoxville:</h3>
+            {% for org in orgs %}
+                {% if org.boundary == area %}
+                    <p>{{org.name}} (District {{org.district}})</p>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+{% endblock content %}

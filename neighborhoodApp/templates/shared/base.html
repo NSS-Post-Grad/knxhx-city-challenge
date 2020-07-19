@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>City of Knoxville</title>
+
+    {% block css %}
+    {% endblock %}
+</head>
+
+<body>
+
+
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% block scripts %}
+
+    {% endblock scripts %}
+
+</body>
+
+</html>
