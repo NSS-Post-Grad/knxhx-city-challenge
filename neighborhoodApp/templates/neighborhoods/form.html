@@ -12,13 +12,14 @@
             <label for="name">Name: </label>
             <input id="name" type="text" name="name">
         </fieldset>
-                <fieldset>
-            <label for="org_type">Organization Type: </label>
-            <input id="org_type" type="text" name="org_type">
-        </fieldset>
         <fieldset>
-            <label for="district">District: </label>
-            <input id="district" type="number" min="1" name="district">
+            <label for="org_type">Organization Type: </label>
+            <select name="org_type" id="org_type">
+                <option value="Homeowner Association">Homeowner Association</option>
+                <option value="Neighborhood Association">Neighborhood Association</option>
+                <option value="Neighborhood Watch">Neighborhood Watch</option>
+                <option value="Town Hall">Town Hall</option>
+            </select>
         </fieldset>
         <fieldset>
             <label for="boundary">Boundary: </label>
@@ -28,6 +29,10 @@
                 <option value="East">East</option>
                 <option value="West">West</option>
             </select>
+        </fieldset>
+        <fieldset>
+            <label for="district">District: </label>
+            <input id="district" type="number" min="1" name="district">
         </fieldset>
         <fieldset>
             <label for="email">Email: </label>
