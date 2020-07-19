@@ -12,24 +12,20 @@
 
 ## Features List
 
-### Feature
+### Add Neighborhood Organizations
+  Users can add a new neighborhood organization to the directory. They can specify general info about the organization such as category, district, and 
+
+### Filter Neighborhood Organizations
   feature description & image
 
-### Feature
+### Add Residents
   feature description & image
 
-### Feature
+### Filter Residents
   feature description & image
 
-### Feature
+### Public vs Private Views
   feature description & image
-
-### Feature
-  feature description & image
-  
-  
-### Feature
-  feature description & image  
 
 ## Technologies Used
   ![Python](neighborhoodApp/static/images/icons8-python-48.png)
