@@ -16,9 +16,11 @@ def search(request):
             if value == "active":
 
                 neighborhoods = Neighborhood_org.objects.filter(is_active=True)
+                search = "active organizations"
 
                 context = {
-                    "neighborhoods": neighborhoods
+                    "neighborhoods": neighborhoods,
+                    "search": search
                 }
 
                 template = 'search/search_results_neighborhood.html'
@@ -26,9 +28,11 @@ def search(request):
             elif value == "inactive":
 
                 neighborhoods = Neighborhood_org.objects.filter(is_active=False)
+                search = "inactive organizations"
 
                 context = {
-                    "neighborhoods": neighborhoods
+                    "neighborhoods": neighborhoods,
+                    "search": search
                 }
 
                 template = 'search/search_results_neighborhood.html'
