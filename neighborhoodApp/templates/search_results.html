@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Search Results</h1>
+
+    {% for neighborhood in neighborhoods %}
+        <h3>{{ neighborhood.name }}</h3>
+    {% endfor %}
+
+{% endblock %}
