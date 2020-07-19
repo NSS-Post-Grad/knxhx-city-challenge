@@ -6,7 +6,7 @@
 
     {% if residents %}
         {% for resident in residents %}
-            <h3>{{ resident.first_name }} {{ resident.last_name }}</h3>
+            <h3><a href="{% url 'neighborhoodApp:resident' resident.id %}">{{ resident.first_name }} {{ resident.last_name }}</a></h3>
         {% endfor %}
     {% else %}
         <h3>There are no residents matching this criteria.</h3>
