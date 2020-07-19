@@ -35,17 +35,17 @@ def search(request):
 
             else:
 
-                all_neighborhoods = Neighborhood_org.objects.all()
-                organization_types = []
+                # all_neighborhoods = Neighborhood_org.objects.all()
+                # organization_types = []
 
-                for neighborhood in all_neighborhoods:
-                    organization_types.append(neighborhood.org_type)
+                # for neighborhood in all_neighborhoods:
+                #     organization_types.append(neighborhood.org_type)
 
-                organization_types = list(set(organization_types))
+                # organization_types = list(set(organization_types))
 
                 context = {
                     "value": value,
-                    "organization_types": organization_types
+                    # "organization_types": organization_types
                 }
                 
                 template = 'search/search_criteria.html'

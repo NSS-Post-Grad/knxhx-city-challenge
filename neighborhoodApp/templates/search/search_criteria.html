@@ -24,9 +24,10 @@
         <h3>What neighborhood organization type do you want to search by?</h3>
         <select required id="search-criteria" name="search-criteria">
             <option value="" disabled selected>Select</option>
-            {% for organization_type in organization_types %}
-                <option value="{{organization_type}}">{{organization_type}}</option>
-            {% endfor %}
+            <option value="Homeowner Association">Homeowner Association</option>
+            <option value="Neighborhood Association">Neighborhood Association</option>
+            <option value="Neighborhood Watch">Neighborhood Watch</option>
+            <option value="Town Hall">Town Hall</option>
         </select>
         <input type="hidden" name="search-criteria-form" value='org_type'>
 
