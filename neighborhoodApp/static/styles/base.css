@@ -20,9 +20,17 @@ body {
 .main-content {
     margin-left: 3%;
     margin-right: 3%;
+<<<<<<< HEAD
     margin-top: 100px;
 }
 
 /* .formContainer {
 
 } */
+=======
+}
+
+.cancel-button-container {
+    margin-top: 10px;
+}
+>>>>>>> master

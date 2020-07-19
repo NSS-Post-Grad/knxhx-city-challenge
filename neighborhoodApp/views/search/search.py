@@ -16,9 +16,11 @@ def search(request):
             if value == "active":
 
                 neighborhoods = Neighborhood_org.objects.filter(is_active=True)
+                search = "active organizations"
 
                 context = {
-                    "neighborhoods": neighborhoods
+                    "neighborhoods": neighborhoods,
+                    "search": search
                 }
 
                 template = 'search/search_results_neighborhood.html'
@@ -26,26 +28,19 @@ def search(request):
             elif value == "inactive":
 
                 neighborhoods = Neighborhood_org.objects.filter(is_active=False)
+                search = "inactive organizations"
 
                 context = {
-                    "neighborhoods": neighborhoods
+                    "neighborhoods": neighborhoods,
+                    "search": search
                 }
 
                 template = 'search/search_results_neighborhood.html'
 
             else:
 
-                # all_neighborhoods = Neighborhood_org.objects.all()
-                # organization_types = []
-
-                # for neighborhood in all_neighborhoods:
-                #     organization_types.append(neighborhood.org_type)
-
-                # organization_types = list(set(organization_types))
-
                 context = {
                     "value": value,
-                    # "organization_types": organization_types
                 }
                 
                 template = 'search/search_criteria.html'
@@ -54,12 +49,18 @@ def search(request):
 
         elif ('search-criteria-form' in form_data):
 
+                search_criteria = form_data['search-criteria']
+
                 if (form_data['search-criteria-form'] == 'district'):
                     
                     neighborhoods = Neighborhood_org.objects.filter(district=form_data['search-criteria'])
 
+                    search = "district -"
+
                     context = {
-                        "neighborhoods": neighborhoods
+                        "neighborhoods": neighborhoods,
+                        "search_criteria": search_criteria,
+                        "search": search
                     }
 
                     template = 'search/search_results_neighborhood.html'
@@ -70,8 +71,12 @@ def search(request):
                     
                     neighborhoods = Neighborhood_org.objects.filter(org_type=form_data['search-criteria'])
 
+                    search = "neighborhood organization type -"
+
                     context = {
-                        "neighborhoods": neighborhoods
+                        "neighborhoods": neighborhoods,
+                        "search_criteria": search_criteria,
+                        "search": search
                     }
 
                     template = 'search/search_results_neighborhood.html'
@@ -82,8 +87,12 @@ def search(request):
                     
                     neighborhoods = Neighborhood_org.objects.filter(name__icontains=form_data['search-criteria'])
 
+                    search = "neighborhood organization name -"
+
                     context = {
                         "neighborhoods": neighborhoods,
+                        "search_criteria": search_criteria,
+                        "search": search
                     }
 
                     template = 'search/search_results_neighborhood.html'
@@ -94,8 +103,12 @@ def search(request):
                     
                     neighborhoods = Neighborhood_org.objects.filter(day=form_data['search-criteria'])
 
+                    search = "meeting day -"
+
                     context = {
-                        "neighborhoods": neighborhoods
+                        "neighborhoods": neighborhoods,
+                        "search_criteria": search_criteria,
+                        "search": search
                     }
 
                     template = 'search/search_results_neighborhood.html'
@@ -106,8 +119,12 @@ def search(request):
                     
                     residents = Resident.objects.filter(first_name__icontains=form_data['search-criteria'])
 
+                    search = "resident first name -"
+
                     context = {
-                        "residents": residents
+                        "residents": residents,
+                        "search_criteria": search_criteria,
+                        "search": search
                     }
 
                     template = 'search/search_results_resident.html'
@@ -118,8 +135,12 @@ def search(request):
                     
                     residents = Resident.objects.filter(last_name__icontains=form_data['search-criteria'])
 
+                    search = "resident last name-"
+
                     context = {
-                        "residents": residents
+                        "residents": residents,
+                        "search_criteria": search_criteria,
+                        "search": search
                     }
 
                     template = 'search/search_results_resident.html'
