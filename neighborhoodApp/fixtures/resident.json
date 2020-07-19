@@ -23,7 +23,7 @@
             "first_name": "Matt",
             "last_name": "Kroeger",
             "organization_position": "Member",
-            "email": "matt@gmail.com",
+            "email": "mattk@gmail.com",
             "phone": 6157351298,
             "address_1": "123 South Ave",
             "address_2": "",
@@ -65,6 +65,346 @@
             "zip_code": 37909,
             "is_subscribed": "False",
             "neighborhood_org_id": 4
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 5,
+        "fields": {
+            "first_name": "Dustin",
+            "last_name": "Murdock",
+            "organization_position": "Member",
+            "email": "dustin@gmail.com",
+            "phone": 6153963056,
+            "address_1": "123 Park Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37921,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 4
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 6,
+        "fields": {
+            "first_name": "Jeremy",
+            "last_name": "Mattingly",
+            "organization_position": "Organizer",
+            "email": "jeremy@gmail.com",
+            "phone": 6155794676,
+            "address_1": "123 Ocean Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37932,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 5
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 7,
+        "fields": {
+            "first_name": "Cody",
+            "last_name": "Murdock",
+            "organization_position": "Organizer",
+            "email": "cody@gmail.com",
+            "phone": 6156782234,
+            "address_1": "123 Washington Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37921,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 6
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 8,
+        "fields": {
+            "first_name": "Trinity",
+            "last_name": "Terry",
+            "organization_position": "Member",
+            "email": "trinity@gmail.com",
+            "phone": 6155560976,
+            "address_1": "123 Redmont Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37901,
+            "is_subscribed": "False",
+            "neighborhood_org_id": 7
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 9,
+        "fields": {
+            "first_name": "Keith",
+            "last_name": "Potempa",
+            "organization_position": "Organizer",
+            "email": "keith@gmail.com",
+            "phone": 6152357453,
+            "address_1": "123 Freemont Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37921,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 7
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 10,
+        "fields": {
+            "first_name": "Mike",
+            "last_name": "Prince",
+            "organization_position": "Member",
+            "email": "mike@gmail.com",
+            "phone": 6152124300,
+            "address_1": "123 Delaware Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37902,
+            "is_subscribed": "False",
+            "neighborhood_org_id": 8
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 11,
+        "fields": {
+            "first_name": "Jack",
+            "last_name": "Parsons",
+            "organization_position": "Member",
+            "email": "jack@gmail.com",
+            "phone": 6150950045,
+            "address_1": "123 Woodland Street",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37902,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 9
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 12,
+        "fields": {
+            "first_name": "Mollie",
+            "last_name": "Goforth",
+            "organization_position": "Organizer",
+            "email": "mollie@gmail.com",
+            "phone": 6159556789,
+            "address_1": "123 Utah Way",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37912,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 10
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 13,
+        "fields": {
+            "first_name": "Andrew",
+            "last_name": "Green",
+            "organization_position": "Member",
+            "email": "andrew@gmail.com",
+            "phone": 6153781120,
+            "address_1": "123 8th Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37921,
+            "is_subscribed": "False",
+            "neighborhood_org_id": 10
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 14,
+        "fields": {
+            "first_name": "Kurt",
+            "last_name": "Krafft",
+            "organization_position": "Organizer",
+            "email": "kurt@gmail.com",
+            "phone": 6155567034,
+            "address_1": "123 10th Street",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37901,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 11
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 15,
+        "fields": {
+            "first_name": "Matt",
+            "last_name": "Baker",
+            "organization_position": "Member",
+            "email": "mattb@gmail.com",
+            "phone": 6155952398,
+            "address_1": "123 Nevada Way",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37924,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 12
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 16,
+        "fields": {
+            "first_name": "Matt",
+            "last_name": "Blagg",
+            "organization_position": "Member",
+            "email": "mattb2@gmail.com",
+            "phone": 6157772309,
+            "address_1": "123 1st Street",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37921,
+            "is_subscribed": "False",
+            "neighborhood_org_id": 13
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 17,
+        "fields": {
+            "first_name": "Sofia",
+            "last_name": "Candiani",
+            "organization_position": "Organizer",
+            "email": "sofia@gmail.com",
+            "phone": 6159942356,
+            "address_1": "123 2nd Street",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37902,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 14
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 18,
+        "fields": {
+            "first_name": "Matt",
+            "last_name": "Crook",
+            "organization_position": "Member",
+            "email": "mattc@gmail.com",
+            "phone": 6150436003,
+            "address_1": "123 17th Street",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37921,
+            "is_subscribed": "False",
+            "neighborhood_org_id": 14
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 19,
+        "fields": {
+            "first_name": "Michael",
+            "last_name": "Clark",
+            "organization_position": "Member",
+            "email": "michael@gmail.com",
+            "phone": 6151129832,
+            "address_1": "123 Boscobel Street",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37916,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 7
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 20,
+        "fields": {
+            "first_name": "Castle",
+            "last_name": "Crawford",
+            "organization_position": "Member",
+            "email": "castle@gmail.com",
+            "phone": 6157892230,
+            "address_1": "123 Fatherland Ave",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37915,
+            "is_subscribed": "False",
+            "neighborhood_org_id": 13
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 21,
+        "fields": {
+            "first_name": "Matt",
+            "last_name": "Reeds",
+            "organization_position": "Organizer",
+            "email": "mattr@gmail.com",
+            "phone": 6155942744,
+            "address_1": "123 Science Way",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37921,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 9
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 22,
+        "fields": {
+            "first_name": "Tyler",
+            "last_name": "Simeone",
+            "organization_position": "Organizer",
+            "email": "tyler@gmail.com",
+            "phone": 6150395002,
+            "address_1": "123 9th Street",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37921,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 3
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 23,
+        "fields": {
+            "first_name": "Chase",
+            "last_name": "Sullins",
+            "organization_position": "Member",
+            "email": "chase@gmail.com",
+            "phone": 6150542030,
+            "address_1": "123 California Way",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37902,
+            "is_subscribed": "False",
+            "neighborhood_org_id": 2
+        }
+    },
+    {
+        "model": "neighborhoodApp.resident",
+        "pk": 24,
+        "fields": {
+            "first_name": "Landon",
+            "last_name": "Morgan",
+            "organization_position": "Member",
+            "email": "landon@gmail.com",
+            "phone": 6154326745,
+            "address_1": "123 Sunny Street",
+            "address_2": "",
+            "city_state": "Knoxville, TN",
+            "zip_code": 37914,
+            "is_subscribed": "True",
+            "neighborhood_org_id": 12
         }
     }
 ]

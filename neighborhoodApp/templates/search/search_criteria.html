@@ -1,0 +1,68 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+
+    <h1>Search</h1>
+
+    <form action="{% url 'neighborhoodApp:search' %}" method="get">
+        {% csrf_token %}
+    
+    {% if value == 'district' %}
+        <h3>What district number do you want to search by?</h3>
+        <select required id="search-criteria" name="search-criteria">
+            <option value="" disabled selected>Select</option>
+            <option value=1>1</option>
+            <option value=2>2</option>
+            <option value=3>3</option>
+            <option value=4>4</option>
+            <option value=5>5</option>
+            <option value=6>6</option>
+        </select>
+        <input type="hidden" name="search-criteria-form" value='district'>
+
+    {% elif value == 'org_type' %}
+        <h3>What neighborhood organization type do you want to search by?</h3>
+        <select required id="search-criteria" name="search-criteria">
+            <option value="" disabled selected>Select</option>
+            <option value="Homeowner Association">Homeowner Association</option>
+            <option value="Neighborhood Association">Neighborhood Association</option>
+            <option value="Neighborhood Watch">Neighborhood Watch</option>
+            <option value="Town Hall">Town Hall</option>
+        </select>
+        <input type="hidden" name="search-criteria-form" value='org_type'>
+
+    {% elif value == 'neighborhood_name' %}
+        <h3>What neighborhood organization name do you want to search by?</h3>
+        <input required type="text" name="search-criteria">
+        <input type="hidden" name="search-criteria-form" value='neighborhood_name'>
+
+    {% elif value == 'day' %}
+        <h3>What meeting day do you want to search by?</h3>
+        <select required id="search-criteria" name="search-criteria">
+            <option value="" disabled selected>Select</option>
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+        <input type="hidden" name="search-criteria-form" value='day'>
+
+    {% elif value == 'resident_first_name' %}
+        <h3>What resident first name do you want to search by?</h3>
+        <input required type="text" name="search-criteria">
+        <input type="hidden" name="search-criteria-form" value='resident_first_name'>
+
+    {% elif value == 'resident_last_name' %}
+        <h3>What resident last name do you want to search by?</h3>
+        <input required type="text" name="search-criteria">
+        <input type="hidden" name="search-criteria-form" value='resident_last_name'>
+    {% endif %}
+
+    <button type="submit">Search</button>
+
+    </form>
+
+{% endblock %}

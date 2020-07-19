@@ -1,0 +1,26 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+
+    <h1>Search</h1>
+
+    <form action="{% url 'neighborhoodApp:search' %}" method="get">
+        {% csrf_token %}
+    <h3>What do you want to search by?</h3>
+    <select required id="search" name="search">
+        <option value="" disabled selected>Select</option>
+        <option value="district">City Council District</option>
+        <option value="org_type">Neighborhood Organization Type</option>
+        <option value="neighborhood_name">Neighborhood Organization Name</option>
+        <option value="day">Meeting Day</option>
+        <option value="active">Active Organizations</option>
+        <option value="inactive">Inactive Organizations</option>
+        <option value="resident_first_name">Resident First Name</option>
+        <option value="resident_last_name">Resident Last Name</option>
+    </select>
+    <input type="hidden" name="search-form">
+    <button type="submit">Select</button>
+
+    </form>
+
+{% endblock %}

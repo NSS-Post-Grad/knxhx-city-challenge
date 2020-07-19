@@ -18,8 +18,8 @@
         <a href="{% url 'neighborhoodApp:home' %}"><img id="logo" src="{% static 'images/knoxlogo.png' %}" alt="logo"></a>
         <div id="navLinkContainer">
             <a class="navLink" href="{% url 'neighborhoodApp:neighborhoods' %}">Neighborhood Directory</a>
-            <a class="navLink" href="{% url 'neighborhoodApp:mailinglist' %}">Mailing List</a>
-            <a class="navLink" href="{% url 'neighborhoodApp:home' %}">Search</a>
+            <a class="navLink" href="{% url 'neighborhoodApp:residents' %}">Resident Directory</a>
+            <a class="navLink" href="{% url 'neighborhoodApp:search' %}">Search</a>
             <a class="navLink" href="{% url 'neighborhoodApp:neighborhood_form' %}">Add Neighborhood</a>
             {% if user.is_authenticated %}
                 <a class="navLink" href="{% url 'neighborhoodApp:home' %}">Log Out</a>
