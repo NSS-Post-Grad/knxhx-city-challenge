@@ -17,6 +17,10 @@
             <input id="org_type" type="text" name="org_type">
         </fieldset>
         <fieldset>
+            <label for="district">District: </label>
+            <input id="district" type="number" min="1" name="district">
+        </fieldset>
+        <fieldset>
             <label for="boundary">Boundary: </label>
             <select name="boundary" id="boundary">
                 <option value="North">North</option>
@@ -39,7 +43,7 @@
         </fieldset>
         <fieldset>
             <label for="notes">Notes: </label>
-            <input id="notes" type="text" name="notes">
+            <textarea id="notes" name="notes"></textarea>
         </fieldset>
         <fieldset>
             <label for="meeting">Actively Meeting: </label><br>
@@ -70,10 +74,6 @@
                 <input id="frequency" type="text" name="frequency">
             </fieldset>
         </div>
-        <fieldset>
-            <label for="district">District: </label>
-            <input id="district" type="number" name="district">
-        </fieldset>
 
         <input type="submit" value="Add" />
     </form>
