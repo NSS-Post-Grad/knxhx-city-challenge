@@ -50,6 +50,7 @@
         </section>
         </br>
         <form action="{% url 'neighborhoodApp:neighborhoods' %}" method="get">
+            {% csrf_token %}
             <button type="submit">Back</button>
         </form>
     </div>

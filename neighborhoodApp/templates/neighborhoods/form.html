@@ -94,6 +94,13 @@
         <input type="submit" value="Add" />
     </form>
 
+    <div class="cancel-button-container">
+        <form action="{% url 'neighborhoodApp:neighborhoods' %}" method="get">
+            {% csrf_token %}
+            <button type="submit">Cancel</button>
+        <form>
+    </div>
+
 {% block javascript %}
     <script>
 

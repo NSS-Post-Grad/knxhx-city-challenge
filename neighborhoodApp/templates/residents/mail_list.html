@@ -17,6 +17,7 @@
     </div>
     </br>
     <form action="{% url 'neighborhoodApp:residents' %}" method="get">
+        {% csrf_token %}
         <button type="submit">Back</button>
     </form>
 
