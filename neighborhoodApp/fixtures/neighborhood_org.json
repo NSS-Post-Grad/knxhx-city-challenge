@@ -44,7 +44,7 @@
         "pk": 3,
         "fields": {
             "name": "Seven Springs Home Owners Association",
-            "org_type": "Home Owners Association",
+            "org_type": "Homeowner Association",
             "is_active": "False",
             "email": "sevenspringsHOA@gmail.com",
             "district": 3,

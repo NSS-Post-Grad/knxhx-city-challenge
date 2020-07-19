@@ -7,7 +7,7 @@
     <form action="{% url 'neighborhoodApp:search' %}" method="get">
         {% csrf_token %}
     <h3>What do you want to search by?</h3>
-    <select id="search" name="search">
+    <select required id="search" name="search">
         <option value="" disabled selected>Select</option>
         <option value="district">City Council District</option>
         <option value="org_type">Neighborhood Organization Type</option>
