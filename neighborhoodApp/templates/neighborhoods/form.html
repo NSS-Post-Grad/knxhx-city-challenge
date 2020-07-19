@@ -14,7 +14,8 @@
         </fieldset>
         <fieldset>
             <label for="org_type">Organization Type: </label>
-            <select name="org_type" id="org_type">
+            <select required name="org_type" id="org_type">
+                <option value="" disabled selected>Select</option>
                 <option value="Homeowner Association">Homeowner Association</option>
                 <option value="Neighborhood Association">Neighborhood Association</option>
                 <option value="Neighborhood Watch">Neighborhood Watch</option>
@@ -23,7 +24,8 @@
         </fieldset>
         <fieldset>
             <label for="boundary">Boundary: </label>
-            <select name="boundary" id="boundary">
+            <select required name="boundary" id="boundary">
+                <option value="" disabled selected>Select</option>
                 <option value="North">North</option>
                 <option value="South">South</option>
                 <option value="East">East</option>
@@ -68,7 +70,16 @@
             </fieldset>
             <fieldset>
                 <label for="day">Day: </label>
-                <input id="day" type="text" name="day">
+                <select name="day" id="day">
+                    <option value="" selected>Select</option>
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    <option value="Saturday">Saturday</option>
+                    <option value="Sunday">Sunday</option>
+                </select>
             </fieldset>
             <fieldset>
                 <label for="week">Week: </label>
