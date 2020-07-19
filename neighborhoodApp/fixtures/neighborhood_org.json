@@ -264,7 +264,7 @@
         "pk": 14,
         "fields": {
             "name": "Sherwood Court Home Owners Association",
-            "org_type": "Neighborhood Association",
+            "org_type": "Homeowner Association",
             "is_active": "False",
             "email": "sherwoodcourtassociation@gmail.com",
             "district": 2,
