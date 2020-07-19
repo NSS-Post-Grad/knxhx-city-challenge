@@ -17,5 +17,6 @@ urlpatterns = [
     path('residents/<int:res_id>', resident_details, name='resident'),
     path('mailinglist/', mail_list, name='mailinglist'),
     path('neighborhood/form', neighborhood_form, name='neighborhood_form'),
+   
 ]
 
