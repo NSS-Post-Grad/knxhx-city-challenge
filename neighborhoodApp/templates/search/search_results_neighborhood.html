@@ -6,7 +6,7 @@
 
     {% if neighborhoods %}
         {% for neighborhood in neighborhoods %}
-            <h3>{{ neighborhood.name }}</h3>
+            <h3><a href="{% url 'neighborhoodApp:neighborhood' neighborhood.id %}">{{ neighborhood.name }}</a></h3>
         {% endfor %}
     {% else %}
         <h3>There are no neighborhood organizations matching this criteria.</h3>

@@ -80,7 +80,7 @@ def search(request):
 
                 elif (form_data['search-criteria-form'] == 'neighborhood_name'):
                     
-                    neighborhoods = Neighborhood_org.objects.filter(name=form_data['search-criteria'])
+                    neighborhoods = Neighborhood_org.objects.filter(name__icontains=form_data['search-criteria'])
 
                     context = {
                         "neighborhoods": neighborhoods,
@@ -104,7 +104,7 @@ def search(request):
 
                 elif (form_data['search-criteria-form'] == 'resident_first_name'):
                     
-                    residents = Resident.objects.filter(first_name=form_data['search-criteria'])
+                    residents = Resident.objects.filter(first_name__icontains=form_data['search-criteria'])
 
                     context = {
                         "residents": residents
@@ -116,7 +116,7 @@ def search(request):
 
                 elif (form_data['search-criteria-form'] == 'resident_last_name'):
                     
-                    residents = Resident.objects.filter(last_name=form_data['search-criteria'])
+                    residents = Resident.objects.filter(last_name__icontains=form_data['search-criteria'])
 
                     context = {
                         "residents": residents
