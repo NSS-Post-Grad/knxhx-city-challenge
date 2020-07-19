@@ -21,7 +21,7 @@ def search(request):
                     "neighborhoods": neighborhoods
                 }
 
-                template = 'search_results_neighborhood.html'
+                template = 'search/search_results_neighborhood.html'
 
             elif value == "inactive":
 
@@ -31,15 +31,24 @@ def search(request):
                     "neighborhoods": neighborhoods
                 }
 
-                template = 'search_results_neighborhood.html'
+                template = 'search/search_results_neighborhood.html'
 
             else:
 
+                all_neighborhoods = Neighborhood_org.objects.all()
+                organization_types = []
+
+                for neighborhood in all_neighborhoods:
+                    organization_types.append(neighborhood.org_type)
+
+                organization_types = list(set(organization_types))
+
                 context = {
-                    "value": value
+                    "value": value,
+                    "organization_types": organization_types
                 }
                 
-                template = 'search_criteria.html'
+                template = 'search/search_criteria.html'
 
             return render(request, template, context)
 
@@ -49,17 +58,77 @@ def search(request):
                     
                     neighborhoods = Neighborhood_org.objects.filter(district=form_data['search-criteria'])
 
-                context = {
-                    "neighborhoods": neighborhoods
-                }
+                    context = {
+                        "neighborhoods": neighborhoods
+                    }
 
-                template = 'search_results_neighborhood.html'
+                    template = 'search/search_results_neighborhood.html'
 
-                return render(request, template, context)
+                    return render(request, template, context)
+
+                elif (form_data['search-criteria-form'] == 'org_type'):
+                    
+                    neighborhoods = Neighborhood_org.objects.filter(org_type=form_data['search-criteria'])
+
+                    context = {
+                        "neighborhoods": neighborhoods
+                    }
+
+                    template = 'search/search_results_neighborhood.html'
+
+                    return render(request, template, context)
+
+                elif (form_data['search-criteria-form'] == 'neighborhood_name'):
+                    
+                    neighborhoods = Neighborhood_org.objects.filter(name=form_data['search-criteria'])
+
+                    context = {
+                        "neighborhoods": neighborhoods,
+                    }
+
+                    template = 'search/search_results_neighborhood.html'
+
+                    return render(request, template, context)
+
+                elif (form_data['search-criteria-form'] == 'day'):
+                    
+                    neighborhoods = Neighborhood_org.objects.filter(day=form_data['search-criteria'])
+
+                    context = {
+                        "neighborhoods": neighborhoods
+                    }
+
+                    template = 'search/search_results_neighborhood.html'
+
+                    return render(request, template, context)
+
+                elif (form_data['search-criteria-form'] == 'resident_first_name'):
+                    
+                    residents = Resident.objects.filter(first_name=form_data['search-criteria'])
+
+                    context = {
+                        "residents": residents
+                    }
+
+                    template = 'search/search_results_resident.html'
+
+                    return render(request, template, context)
+
+                elif (form_data['search-criteria-form'] == 'resident_last_name'):
+                    
+                    residents = Resident.objects.filter(last_name=form_data['search-criteria'])
+
+                    context = {
+                        "residents": residents
+                    }
+
+                    template = 'search/search_results_resident.html'
+
+                    return render(request, template, context)
 
         else:
 
-            template = 'search.html'
+            template = 'search/search.html'
 
             return render(request, template)
 

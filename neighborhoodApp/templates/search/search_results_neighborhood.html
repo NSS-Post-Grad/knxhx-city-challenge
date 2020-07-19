@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'shared/base.html' %}
 
 {% block content %}
 
@@ -11,5 +11,9 @@
     {% else %}
         <h3>There are no neighborhood organizations matching this criteria.</h3>
     {% endif %}
+
+    <form action="{% url 'neighborhoodApp:search' %}" method="get">
+        <button type="submit">New Search</button>
+    <form>
 
 {% endblock %}
