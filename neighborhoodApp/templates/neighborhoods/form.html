@@ -36,7 +36,15 @@
         </fieldset>
         <fieldset>
             <label for="district">District: </label>
-            <input required id="district" type="number" min="1" name="district">
+            <select required name="district" id="district">
+                <option value="" disabled selected>Select</option>
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+            </select>
         </fieldset>
         <fieldset>
             <label for="email">Email: </label>
@@ -89,7 +97,13 @@
             </fieldset>
             <fieldset>
                 <label for="frequency">Frequency: </label>
-                <input id="frequency" type="text" name="frequency">
+                <select required name="frequency" id="frequency">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Monthly">Monthly</option>
+                    <option value="Bi Monthly">Bi Monthly</option>
+                    <option value="Quarterly">Quarterly</option>
+                    <option value="Annually">Annually</option>
+            </select>
             </fieldset>
         </div>
         </br>
