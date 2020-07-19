@@ -32,12 +32,12 @@
   feature description & image  
 
 ## Technologies Used
-  Python
-  Django
-  HTML
-  CSS
-  JavaScript
-  SQLite
+  ![Python](neighborhoodApp/static/images/icons8-python-48.png)
+  ![Django](neighborhoodApp/static/images/icons8-django-48.png)
+  ![HTML](neighborhoodApp/static/images/icons8-html-filetype-48.png)
+  ![CSS](neighborhoodApp/static/images/icons8-css3-48.png)
+  ![JavaScript](neighborhoodApp/static/images/icons8-javascript-48.png)
+  ![SQLite](neighborhoodApp/static/images/icons8-sql-48.png)
 
 ## Installing and Running the App
 
