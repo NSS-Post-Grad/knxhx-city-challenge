@@ -20,6 +20,11 @@ def neighborhood_list(request):
     elif request.method == 'POST':
 
         form_data = request.POST
+        is_active = False
+        meeting = form_data['meeting']
+        if (meeting == "yes"):
+            is_active = True
+
 
         new_neighborhood = Neighborhood_org()
         new_neighborhood.name = form_data['name']
@@ -36,7 +41,7 @@ def neighborhood_list(request):
         new_neighborhood.week = form_data['week']
         new_neighborhood.frequency = form_data['frequency']
         new_neighborhood.last_updated = datetime.now()
-        new_neighborhood.is_active = True
+        new_neighborhood.is_active = is_active
               
         new_neighborhood.save()
 
