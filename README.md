@@ -57,7 +57,7 @@
 
   Install dependencies
   ```sh
-    pip install requirements.txt
+    pip install -r requirements.txt
   ```
 
   Make migrations and migrate to create your database structure
