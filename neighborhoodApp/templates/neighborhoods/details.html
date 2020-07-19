@@ -1,0 +1,31 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+    <div><h1>City of Knoxville</h1></div>
+
+    <div><h2>{{org.name}}</h2></div>
+
+    <div>
+        <h3>(District {{org.district}})</h3>
+        </br>
+        <section>
+            <p>Reach us at:</p>
+            <p><a target="_blank" href="mailto:{{org.email}}">{{org.email}}</a></p>
+            {% if org.website %}
+                <p><a href="{{org.website}}">{{org.website}}</a></p>
+            {% endif %}
+            {% if org.facebook %}
+                <p><a href="{{org.facebook}}">{{org.facebook}}</a></p>
+            {% endif %}
+            {% if org.notes %}
+                <p>*{{org.notes}}</p>
+            {% endif %}
+            </br>
+            {% if org.is_active %}
+             <p>We also have regular meetings {{org.frequency}} every {{org.week}} {{org.day}} at {{org.time}} at <a href="https://www.google.com/maps/search/{{address}}+Knoxville+TN">{{org.location}}</a></p>
+             <p>Come join us!</p>
+            {% endif %}
+        </section>
+    </div>
+
+{% endblock content %}

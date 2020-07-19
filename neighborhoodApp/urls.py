@@ -8,6 +8,7 @@ app_name = 'neighborhoodApp'
 urlpatterns = [
     path('', home, name='home'),
     path('neighborhoods/', neighborhood_list, name='neighborhoods'),
+    path('neighborhoods/<int:org_id>', neighborhood_details, name='neighborhood'),
     path('neighborhood/form', neighborhood_form, name='neighborhood_form'),
 ]
 

@@ -10,7 +10,7 @@
             <h3>{{area}} Knoxville:</h3>
             {% for org in orgs %}
                 {% if org.boundary == area %}
-                    <p>{{org.name}} (District {{org.district}})</p>
+                    <p><a href="{% url 'neighborhoodApp:neighborhood' org.id %}">{{org.name}} (District {{org.district}})</a></p>
                 {% endif %}
             {% endfor %}
         {% endfor %}

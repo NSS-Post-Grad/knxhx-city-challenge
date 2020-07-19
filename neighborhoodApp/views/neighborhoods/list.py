@@ -3,8 +3,7 @@ from django.contrib.auth.decorators import login_required
 from neighborhoodApp.models import Neighborhood_org
 from datetime import datetime
 
-@login_required
-def neighborhood_list(request, species_id=None):
+def neighborhood_list(request):
     
     if request.method == 'GET':
 
