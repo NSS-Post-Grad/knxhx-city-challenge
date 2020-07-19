@@ -10,10 +10,17 @@ def resident_details(request, res_id):
         resident = Resident.objects.get(pk=res_id)
         org = Neighborhood_org.objects.get(pk=resident.neighborhood_org_id_id)
 
+        if resident.is_subscribed == True:
+            subscribed = "*Subscribed to mailing list"
+        else:
+            subscribed = "*Not subscribed to mailing list"
+
+
         template = 'residents/details.html'
         context = {
             'org': org.name,
-            'resident': resident
+            'resident': resident,
+            'subscribed': subscribed
         }
 
         return render(request, template, context)

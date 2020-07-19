@@ -37,12 +37,13 @@
                 <p><a href="{{org.facebook}}">{{org.facebook}}</a></p>
             {% endif %}
             {% if org.notes %}
+                </br>
                 <p>*{{org.notes}}</p>
             {% endif %}
-            </br>
             {% if org.is_active %}
-             <p>We also have regular meetings {{org.frequency}} every {{org.week}} {{org.day}} at {{org.time}} at <a href="https://www.google.com/maps/search/{{address}}+Knoxville+TN">{{org.location}}</a></p>
-             <p>Come join us!</p>
+            </br>
+            <p>We also have regular meetings {{org.frequency}} every {{org.week}} {{org.day}} at {{org.time}} at <a href="https://www.google.com/maps/search/{{address}}+Knoxville+TN">{{org.location}}</a></p>
+            <p>Come join us!</p>
             {% endif %}
         </section>
         </br>
