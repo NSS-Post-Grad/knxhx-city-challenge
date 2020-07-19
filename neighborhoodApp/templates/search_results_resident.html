@@ -4,16 +4,15 @@
 
     <h1>Search Results</h1>
 
-    {% if neighborhoods %}
-        {% for neighborhood in neighborhoods %}
-            <h3>{{ neighborhood.name }}</h3>
-        {% endfor %}
-    {% endif %}
-
     {% if residents %}
         {% for resident in residents %}
             <h3>{{ resident.first_name }} {{ resident.last_name }}</h3>
         {% endfor %}
+    {% else %}
+        <h3>There are no residents matching this criteria.</h3>
     {% endif %}
+
+    <form>
+    </form>
 
 {% endblock %}

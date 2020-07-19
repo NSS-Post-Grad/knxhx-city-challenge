@@ -21,7 +21,7 @@ def search(request):
                     "neighborhoods": neighborhoods
                 }
 
-                template = 'search_results.html'
+                template = 'search_results_neighborhood.html'
 
             elif value == "inactive":
 
@@ -31,7 +31,7 @@ def search(request):
                     "neighborhoods": neighborhoods
                 }
 
-                template = 'search_results.html'
+                template = 'search_results_neighborhood.html'
 
             else:
 
@@ -46,8 +46,6 @@ def search(request):
         elif ('search-criteria-form' in form_data):
 
                 if (form_data['search-criteria-form'] == 'district'):
-
-                    print("YESSSSSSSSSSSSSSSS")
                     
                     neighborhoods = Neighborhood_org.objects.filter(district=form_data['search-criteria'])
 
@@ -55,7 +53,9 @@ def search(request):
                     "neighborhoods": neighborhoods
                 }
 
-                template = 'search_results.html'
+                template = 'search_results_neighborhood.html'
+
+                return render(request, template, context)
 
         else:
 

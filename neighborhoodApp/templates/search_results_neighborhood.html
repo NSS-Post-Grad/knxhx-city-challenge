@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Search Results</h1>
+
+    {% if neighborhoods %}
+        {% for neighborhood in neighborhoods %}
+            <h3>{{ neighborhood.name }}</h3>
+        {% endfor %}
+    {% else %}
+        <h3>There are no neighborhood organizations matching this criteria.</h3>
+    {% endif %}
+
+{% endblock %}
