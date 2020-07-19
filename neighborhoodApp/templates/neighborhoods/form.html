@@ -2,18 +2,10 @@
 
 {% block content %}
 
-<<<<<<< HEAD
     <h1>Add a New Neighborhood</h1>
     <div class="row">
     <div class="col s12 m6">
     <div id="formContainer" class="card small">
-=======
-    <h1>City of Knoxville</h1>
-    </br>
-    <h2>Add a New Neighborhood</h2>
-    </br>
-
->>>>>>> master
     <form action="{% url 'neighborhoodApp:neighborhoods' %}" method="post">
         {% csrf_token %}
 
