@@ -2,9 +2,9 @@
 
 {% block content %}
     <div><h1>City of Knoxville</h1></div>
-
+    </br>
     <div><h2>Newsletter Mailing List</h2></div>
-
+    </br>
     <div>
         <h3>Contacts:</h3>
         {% for resident in mail %}
@@ -15,5 +15,10 @@
             {% endif %}
         {% endfor %}
     </div>
+    </br>
+    <form action="{% url 'neighborhoodApp:residents' %}" method="get">
+        {% csrf_token %}
+        <button type="submit">Back</button>
+    </form>
 
 {% endblock content %}
