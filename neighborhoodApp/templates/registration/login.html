@@ -1,6 +1,15 @@
-<h2>Admin Login</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+{% extends 'shared/base.html' %}
+
+{% block content %}
+    <h1>City of Knoxville</h1>
+    </br>
+    <h2>Admin Login</h2>
+    </br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        </br>
+        <button type="submit">Login</button>
+    </form>
+
+{% endblock %}
