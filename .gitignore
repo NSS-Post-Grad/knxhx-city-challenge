@@ -31,3 +31,7 @@ media/
 *.db
 *.pid
 *.bak
+
+# node modules
+node_modules
+package-lock.json
