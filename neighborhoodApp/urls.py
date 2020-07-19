@@ -1,4 +1,5 @@
 from django.urls import path, include
+from django.contrib import admin
 from django.conf.urls import include
 from neighborhoodApp.views import *
 from neighborhoodApp.models import *
@@ -8,6 +9,8 @@ app_name = 'neighborhoodApp'
 
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
+    # path('admin/', admin.site.urls, name="admin"),
+    path('logout/', logout_user, name='logout'),
     path('search', search, name='search'),
     path('', home, name='home'),
     path('home/', home, name='home'),

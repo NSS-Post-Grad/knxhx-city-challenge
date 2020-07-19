@@ -1,4 +1,5 @@
 from .search.search import search
+from .auth.logout import logout_user
 from .home import home
 from .neighborhoods.form import neighborhood_form
 from .neighborhoods.list import neighborhood_list
