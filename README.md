@@ -13,19 +13,23 @@
 ## Features List
 
 ### Add Neighborhood Organizations
-  Users can add a new neighborhood organization to the directory. They can specify general info about the organization such as category, district, and 
-
-### Filter Neighborhood Organizations
-  feature description & image
+  Users can add a new neighborhood organization to the directory. They can specify general info about the organization such as category, district, and boundaries as well as add details about meetings.
 
 ### Add Residents
   feature description & image
 
-### Filter Residents
-  feature description & image
+### Search
+  Users have the ability to search both the neighborhood and resident directories. 
+  
+  Neighborhood orgs can be searched by city council district, organization type, active/non-active, meeting nights, and organization name. 
 
+  Residents can be searched by name and neighborhood organization name.
+
+### Filtered Resident Views
+  When looking at the resident directory, users can view a mailing list by filtering residents by those who whould like a newsletter.
+  
 ### Public vs Private Views
-  feature description & image
+  Only authorized users are able to view resident information and add data to the database, while the public is able to view available information about organizations.
 
 ## Technologies Used
   ![Python](neighborhoodApp/static/images/icons8-python-48.png)
