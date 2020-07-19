@@ -16,7 +16,7 @@
             "time": "7:00PM",
             "day": "Thursday",
             "week": "2nd",
-            "frequency": "Once a month"
+            "frequency": "Monthly"
         }
     },
     {
@@ -51,7 +51,7 @@
             "boundary": "West",
             "website": "www.sevenspringshoa.com",
             "facebook": "",
-            "notes": "",
+            "notes": "Not meeting due to COVID-19",
             "location": "",
             "time": "",
             "day": "",
@@ -75,8 +75,88 @@
             "location": "123 Tatewood Street",
             "time": "8:00PM",
             "day": "Tuesday",
+            "week": "2nd & 4th",
+            "frequency": "Bi Monthly"
+        }
+    },
+    {
+        "model": "neighborhoodApp.neighborhood_org",
+        "pk": 5,
+        "fields": {
+            "name": "Forest Brook Neighborhood",
+            "org_type": "Neighborhood Association",
+            "is_active": "True",
+            "email": "forestbrookneighborhood@gmail.com",
+            "district": 5,
+            "boundary": "East",
+            "website": "forestbrookneighborhood.com",
+            "facebook": "",
+            "notes": "",
+            "location": "123 Forest Brook Way",
+            "time": "6:00PM",
+            "day": "Monday",
+            "week": "2nd",
+            "frequency": "Monthly"
+        }
+    },
+    {
+        "model": "neighborhoodApp.neighborhood_org",
+        "pk": 6,
+        "fields": {
+            "name": "Forest Heights Neighborhood Association",
+            "org_type": "Neighborhood Association",
+            "is_active": "True",
+            "email": "forestheightsneighborhood@gmail.com",
+            "district": 5,
+            "boundary": "East",
+            "website": "forestheightsneighborhood.com",
+            "facebook": "",
+            "notes": "",
+            "location": "123 Forest Heights Way",
+            "time": "6:30PM",
+            "day": "Sunday",
+            "week": "1st & 3rd",
+            "frequency": "Bi Monthly"
+        }
+    },
+    {
+        "model": "neighborhoodApp.neighborhood_org",
+        "pk": 7,
+        "fields": {
+            "name": "Historic Holston Hills Community Club",
+            "org_type": "Neighborhood Association",
+            "is_active": "True",
+            "email": "holstonhillscommunity@gmail.com",
+            "district": 6,
+            "boundary": "East",
+            "website": "holstonhillscommunity.com",
+            "facebook": "",
+            "notes": "",
+            "location": "123 Holston Hills Drive",
+            "time": "7:30PM",
+            "day": "Sunday",
             "week": "1st",
-            "frequency": "Biweekly"
+            "frequency": "Monthly"
+        }
+    },
+    {
+        "model": "neighborhoodApp.neighborhood_org",
+        "pk": 8,
+        "fields": {
+            "name": "Holston Meadows Neighborhood Watch",
+            "org_type": "Neighborhood Watch",
+            "is_active": "False",
+            "email": "holstonmeadowswatch@gmail.com",
+            "district": 6,
+            "boundary": "East",
+            "website": "holstonmeadowswatch.com",
+            "facebook": "",
+            "notes": "Not meeting due to COVID-19",
+            "location": "",
+            "time": "",
+            "day": "",
+            "week": "",
+            "frequency": ""
         }
     }
 ]
