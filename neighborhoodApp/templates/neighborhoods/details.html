@@ -8,25 +8,27 @@
     <div>
         <h3>(District {{org.district}})</h3>
         </br>
-        <div>
-            <form action="{% url 'neighborhoodApp:resident_form' org.id %}" method="get">
-                <button type="submit">Add Resident</button>
-            </form>
-        </div>
-        </br>
-        <div>
-            {% for position in organization_positions %}
-                <p>{{position}}:</p>
-                <ul>
-                    {% for resident in residents %}
-                        {% if resident.organization_position == position %}
-                            <li>{{resident.first_name}} {{resident.last_name}}</li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-            {% endfor %}
-        </div>
-        </br>
+        {% if request.user.is_authenticated %}
+            <div>
+                <form action="{% url 'neighborhoodApp:resident_form' org.id %}" method="get">
+                    <button type="submit">Add Resident</button>
+                </form>
+            </div>
+            </br>
+            <div>
+                {% for position in organization_positions %}
+                    <p>{{position}}:</p>
+                    <ul>
+                        {% for resident in residents %}
+                            {% if resident.organization_position == position %}
+                                <li>{{resident.first_name}} {{resident.last_name}}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+            </div>
+            </br>
+        {% endif %}
         <section>
             <p>Reach us at:</p>
             <p><a target="_blank" href="mailto:{{org.email}}">{{org.email}}</a></p>

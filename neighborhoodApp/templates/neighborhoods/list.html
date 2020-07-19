@@ -5,12 +5,14 @@
     </br>
     <div><h2>Neighborhood Directory</h2></div>
     </br>
-    <div>
-        <form action="/neighborhood/form">
-            <input type="submit" value="Add a Neighborhood Organization" />
-        </form>
-    </div>
-    </br>
+    {% if request.user.is_authenticated %}
+        <div>
+            <form action="/neighborhood/form">
+                <input type="submit" value="Add a Neighborhood Organization" />
+            </form>
+        </div>
+        </br>
+    {% endif %}
     <div>
         {% for area in areas %}
             <h3>{{area}} Knoxville:</h3>
