@@ -9,5 +9,6 @@ app_name = 'neighborhoodApp'
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
     path('search', search, name='search'),
+    path('neighborhoods/', neighborhood_list, name='neighborhoods'),
 ]
 
