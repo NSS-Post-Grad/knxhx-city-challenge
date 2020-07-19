@@ -2,8 +2,13 @@
 
 {% block content %}
 
-    <h1>Add a New Resident</h1>
+    <h1>City of Knoxville</h1>
     </br>
+    <h2>Add a New Resident</h2>
+    </br>
+    <h3>To {{ org.name }}:</h3>
+    </br>
+
     <form action="{% url 'neighborhoodApp:residents' %}" method="post">
         {% csrf_token %}
 

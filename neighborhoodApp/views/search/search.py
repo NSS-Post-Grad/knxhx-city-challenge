@@ -55,7 +55,7 @@ def search(request):
                     
                     neighborhoods = Neighborhood_org.objects.filter(district=form_data['search-criteria'])
 
-                    search = "district"
+                    search = "district -"
 
                     context = {
                         "neighborhoods": neighborhoods,

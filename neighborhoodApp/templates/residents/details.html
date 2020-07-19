@@ -8,14 +8,15 @@
     <div>
         </br>
         <section>
-            <p>{{resident.organization_position}} of: </p>
+            <h3>{{resident.organization_position}} of: </h3>
             <p>{{org}}</p>
             </br>
-             <p>Contact info:</p>
+             <h3>Contact info:</h3>
              <p><a target="_blank" href="mailto:{{resident.email}}">{{resident.email}}</a></p>
              <p>{{resident.phone}}</p>
         </section>
         </br>
+        <h3>Subscription:</h3>
         <p>{{subscribed}}</p>
         </br>
         <form action="{% url 'neighborhoodApp:residents' %}" method="get">

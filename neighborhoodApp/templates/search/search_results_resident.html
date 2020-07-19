@@ -2,16 +2,18 @@
 
 {% block content %}
 
-    <h1>Search Results</h1>
+    <h1>City of Knoxville</h1>
     </br>
-    <h3>For {{search}} {{search_criteria}}:</h3>
+    <h2>Search Results</h2>
+    </br>
+    <h3>For {{search}} "{{search_criteria}}"":</h3>
     </br>
     {% if residents %}
         {% for resident in residents %}
-            <h3><a href="{% url 'neighborhoodApp:resident' resident.id %}">{{ resident.first_name }} {{ resident.last_name }}</a></h3>
+            <p><a href="{% url 'neighborhoodApp:resident' resident.id %}">{{ resident.first_name }} {{ resident.last_name }}</a></p>
         {% endfor %}
     {% else %}
-        <h3>There are no residents matching this criteria.</h3>
+        <p>There are no residents matching this criteria.</p>
     {% endif %}
     </br>
     <form action="{% url 'neighborhoodApp:search' %}" method="get">

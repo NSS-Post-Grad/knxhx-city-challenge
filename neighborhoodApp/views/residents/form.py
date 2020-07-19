@@ -6,7 +6,7 @@ from neighborhoodApp.models import Neighborhood_org
 @login_required
 def resident_form(request, org_id):
 
-    org = Neighborhood_org(pk=org_id)
+    org = Neighborhood_org.objects.get(pk=org_id)
     city_state = "Knoxville, TN"
 
     if request.method == 'GET':
