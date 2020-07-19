@@ -1,0 +1,21 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+    <div><h1>City of Knoxville</h1></div>
+
+    <div><h2>Resident Directory</h2></div>
+
+    <div>
+        <h3>{{area}} Knoxville:</h3>
+        {% for resident in residents %}
+            <p><a href="{% url 'neighborhoodApp:resident' resident.id %}">{{resident.first_name}} {{resident.last_name}} - {{resident.neighborhood_org_id.name}}</a></p>
+        {% endfor %}
+    </div>
+
+    <div>
+        <form action="/mailinglist">
+            <input type="submit" value="See the Newsletter Mailing List" />
+        </form>
+    </div>
+
+{% endblock content %}
