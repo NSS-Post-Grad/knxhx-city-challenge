@@ -1,0 +1,19 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+    <div><h1>City of Knoxville</h1></div>
+
+    <div><h2>{{resident.first_name}} {{resident.last_name}}</h2></div>
+
+    <div>
+        </br>
+        <section>
+            <p>{{resident.organization_position}} of: {{org}}</p>
+            </br>
+             <p>Contact info:</p>
+             <p><a target="_blank" href="mailto:{{resident.email}}">{{resident.email}}</a></p>
+             <p>{{resident.phone}}</p>
+        </section>
+    </div>
+
+{% endblock content %}
