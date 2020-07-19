@@ -4,8 +4,16 @@
 
     <h1>Search Results</h1>
 
-    {% for neighborhood in neighborhoods %}
-        <h3>{{ neighborhood.name }}</h3>
-    {% endfor %}
+    {% if neighborhoods %}
+        {% for neighborhood in neighborhoods %}
+            <h3>{{ neighborhood.name }}</h3>
+        {% endfor %}
+    {% endif %}
+
+    {% if residents %}
+        {% for resident in residents %}
+            <h3>{{ resident.first_name }} {{ resident.last_name }}</h3>
+        {% endfor %}
+    {% endif %}
 
 {% endblock %}
