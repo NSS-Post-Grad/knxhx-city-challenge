@@ -11,9 +11,9 @@ def resident_details(request, res_id):
         org = Neighborhood_org.objects.get(pk=resident.neighborhood_org_id_id)
 
         if resident.is_subscribed == True:
-            subscribed = "*Subscribed to mailing list"
+            subscribed = "*Subscribed to newsletter mailing list"
         else:
-            subscribed = "*Not subscribed to mailing list"
+            subscribed = "*Not subscribed to newsletter mailing list"
 
 
         template = 'residents/details.html'
