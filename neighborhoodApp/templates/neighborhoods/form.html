@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Add a New Neighborhood</h1>
+
+
+    <form action="{% url 'neighborhoodApp:neighborhoods' %}" method="post">
+      {% csrf_token %}
+      
+      <fieldset>
+          <label for="name">Name: </label>
+          <input id="name" type="text" name="name">
+      </fieldset>
+            <fieldset>
+          <label for="org_type">org_type: </label>
+          <input id="org_type" type="text" name="org_type">
+      </fieldset>
+      <fieldset>
+          <label for="boundary">Boundary: </label>
+          <input id="boundary" type="text" name="boundary">
+      </fieldset>
+      <fieldset>
+          <label for="email">Email: </label>
+          <input id="email" type="text" name="email">
+      </fieldset>
+      <fieldset>
+          <label for="website">Website: </label>
+          <input id="website" type="text" name="website">
+      </fieldset>
+      <fieldset>
+          <label for="facebook">Facebook: </label>
+          <input id="facebook" type="text" name="facebook">
+      </fieldset>
+      <fieldset>
+          <label for="notes">Notes: </label>
+          <input id="notes" type="text" name="notes">
+      </fieldset>
+      <fieldset>
+          <label for="location">Location: </label>
+          <input id="location" type="text" name="location">
+      </fieldset>
+      <fieldset>
+          <label for="time">Time: </label>
+          <input id="time" type="date" name="time">
+      </fieldset>
+      <fieldset>
+          <label for="day">Day: </label>
+          <input id="day" type="text" name="day">
+      </fieldset>
+      <fieldset>
+          <label for="week">Week: </label>
+          <input id="week" type="text" name="week">
+      </fieldset>
+      <fieldset>
+          <label for="frequency">Frequency: </label>
+          <input id="frequency" type="text" name="frequency">
+      </fieldset>
+      <fieldset>
+          <label for="district">District: </label>
+          <input id="district" type="number" name="district">
+      </fieldset>
+
+      <input type="submit" value="Add" />
+    </form>
+
+{% endblock %}
