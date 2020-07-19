@@ -10,7 +10,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 100px;
+    
 }
 
 .hidden {
@@ -20,4 +20,9 @@ body {
 .main-content {
     margin-left: 3%;
     margin-right: 3%;
+    margin-top: 100px;
 }
+
+/* .formContainer {
+
+} */

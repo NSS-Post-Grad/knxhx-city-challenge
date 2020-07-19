@@ -3,8 +3,9 @@
 {% block content %}
 
     <h1>Add a New Neighborhood</h1>
-
-
+    <div class="row">
+    <div class="col s12 m6">
+    <div id="formContainer" class="card small">
     <form action="{% url 'neighborhoodApp:neighborhoods' %}" method="post">
         {% csrf_token %}
 
@@ -66,7 +67,7 @@
             </fieldset>
             <fieldset>
                 <label for="time">Time: </label>
-                <input id="time" type="time" name="time">
+                <input id="time" type="text" class="timepicker" name="time">
             </fieldset>
             <fieldset>
                 <label for="day">Day: </label>
@@ -93,10 +94,12 @@
 
         <input type="submit" value="Add" />
     </form>
+    </div>
+    </div>
+    </div>
 
 {% block javascript %}
     <script>
-
     function show(){
         document.getElementById("meeting_info").classList.remove("hidden")
     }
@@ -104,6 +107,11 @@
     function hide(){
         document.getElementById("meeting_info").classList.add("hidden")
     }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.timepicker');
+    var instances = M.Timepicker.init(elems);
+    });
 
     </script>
 {% endblock %}
