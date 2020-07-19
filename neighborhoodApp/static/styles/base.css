@@ -21,3 +21,7 @@ body {
     margin-left: 3%;
     margin-right: 3%;
 }
+
+.cancel-button-container {
+    margin-top: 10px;
+}

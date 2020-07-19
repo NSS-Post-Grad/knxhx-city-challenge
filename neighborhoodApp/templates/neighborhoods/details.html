@@ -2,14 +2,35 @@
 
 {% block content %}
     <div><h1>City of Knoxville</h1></div>
-
+    </br>
     <div><h2>{{org.name}}</h2></div>
-
+    </br>
     <div>
-        <h3>(District {{org.district}})</h3>
+        <h3>District {{org.district}} - {{org.boundary}}</h3>
         </br>
+        {% if request.user.is_authenticated %}
+            <div>
+                <form action="{% url 'neighborhoodApp:resident_form' org.id %}" method="get">
+                    <button type="submit">Add Resident</button>
+                </form>
+            </div>
+            </br>
+            <div>
+                {% for position in organization_positions %}
+                    <h3>{{position}}s:</h3>
+                    <ul>
+                        {% for resident in residents %}
+                            {% if resident.organization_position == position %}
+                                <li>{{resident.first_name}} {{resident.last_name}}</li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                {% endfor %}
+            </div>
+            </br>
+        {% endif %}
         <section>
-            <p>Reach us at:</p>
+            <h3>Reach us at:</h3>
             <p><a target="_blank" href="mailto:{{org.email}}">{{org.email}}</a></p>
             {% if org.website %}
                 <p><a href="{{org.website}}">{{org.website}}</a></p>
@@ -18,14 +39,22 @@
                 <p><a href="{{org.facebook}}">{{org.facebook}}</a></p>
             {% endif %}
             {% if org.notes %}
+                </br>
+                <h3>Notes</h3>
                 <p>*{{org.notes}}</p>
             {% endif %}
-            </br>
             {% if org.is_active %}
-             <p>We also have regular meetings {{org.frequency}} every {{org.week}} {{org.day}} at {{org.time}} at <a href="https://www.google.com/maps/search/{{address}}+Knoxville+TN">{{org.location}}</a></p>
-             <p>Come join us!</p>
+            </br>
+            <h3>Meetings:</h3>
+            <p>We also have regular meetings {{org.frequency}} every {{org.week}} {{org.day}} at {{org.time}} at <a href="https://www.google.com/maps/search/{{address}}+Knoxville+TN">{{org.location}}</a></p>
+            <p>Come join us!</p>
             {% endif %}
         </section>
+        </br>
+        <form action="{% url 'neighborhoodApp:neighborhoods' %}" method="get">
+            {% csrf_token %}
+            <button type="submit">Back</button>
+        </form>
     </div>
 
 {% endblock content %}
