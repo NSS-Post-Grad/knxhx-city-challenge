@@ -14,6 +14,19 @@
             </form>
         </div>
         </br>
+        <div>
+            {% for position in organization_positions %}
+                <p>{{position}}:</p>
+                <ul>
+                    {% for resident in residents %}
+                        {% if resident.organization_position == position %}
+                            <li>{{resident.first_name}} {{resident.last_name}}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+        </br>
         <section>
             <p>Reach us at:</p>
             <p><a target="_blank" href="mailto:{{org.email}}">{{org.email}}</a></p>
@@ -32,6 +45,10 @@
              <p>Come join us!</p>
             {% endif %}
         </section>
+        </br>
+        <form action="{% url 'neighborhoodApp:neighborhoods' %}" method="get">
+            <button type="submit">Back</button>
+        </form>
     </div>
 
 {% endblock content %}

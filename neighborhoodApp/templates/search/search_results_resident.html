@@ -3,7 +3,7 @@
 {% block content %}
 
     <h1>Search Results</h1>
-
+    </br>
     {% if residents %}
         {% for resident in residents %}
             <h3><a href="{% url 'neighborhoodApp:resident' resident.id %}">{{ resident.first_name }} {{ resident.last_name }}</a></h3>
@@ -11,7 +11,7 @@
     {% else %}
         <h3>There are no residents matching this criteria.</h3>
     {% endif %}
-
+    </br>
     <form action="{% url 'neighborhoodApp:search' %}" method="get">
         <button type="submit">New Search</button>
     <form>
