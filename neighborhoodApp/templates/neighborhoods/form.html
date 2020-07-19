@@ -37,6 +37,15 @@
           <input id="notes" type="text" name="notes">
       </fieldset>
       <fieldset>
+          <input type="radio" id="yes" name="meeting" value="yes">
+          <label for="yes">Yes</label><br>
+          <input type="radio" id="no" name="meeting" value="no">
+          <label for="no">No</label><br>
+      </fieldset>
+      {% comment %} {% if meeting.value is 'yes' %}
+      {% else %}
+      {% endif %} {% endcomment %}
+      <fieldset>
           <label for="location">Location: </label>
           <input id="location" type="text" name="location">
       </fieldset>

@@ -4,10 +4,13 @@ from neighborhoodApp.models import Neighborhood_org
 from datetime import datetime
 
 @login_required
-def org_list(request, species_id=None):
+def neighborhood_list(request, species_id=None):
+    
     if request.method == 'GET':
+
         orgs = Neighborhood_org.objects.all()
         areas = ["North", "South", "East", "West"]
+
         template = 'neighborhoods/list.html'
         context = {
             'orgs': orgs,
