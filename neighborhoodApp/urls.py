@@ -9,7 +9,7 @@ app_name = 'neighborhoodApp'
 
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
-    # path('admin/', admin.site.urls, name="admin"),
+    path('admin/login/', admin.site.urls, name="login"),
     path('logout/', logout_user, name='logout'),
     path('search', search, name='search'),
     path('', home, name='home'),
