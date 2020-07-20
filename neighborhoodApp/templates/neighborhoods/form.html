@@ -5,7 +5,7 @@
     </br>   
     <h4>Add a New Neighborhood</h4>
     </br>
-    
+
     <div class="row">
     <div class="col s12 m6">
     <div id="formContainer" class="card small">
@@ -65,11 +65,18 @@
             <textarea id="notes" name="notes"></textarea>
         </fieldset>
         <fieldset>
-            <label for="meeting">Actively Meeting: </label><br>
+            <p>Actively Meeting: </p>
+            <br>
+            <label for="yes">
             <input type="radio" id="yes" name="meeting" value="yes" onClick="show()">
-            <label for="yes">Yes</label><br>
+            <span>Yes</span>
+            </label>
+            <br>
+            <label for="no">
             <input type="radio" id="no" name="meeting" value="no" checked onClick="hide()">
-            <label for="no">No</label><br>
+            <span>No</span>
+            </label>
+            <br>
         </fieldset>
         <div id="meeting_info" class="hidden">
             <fieldset>
