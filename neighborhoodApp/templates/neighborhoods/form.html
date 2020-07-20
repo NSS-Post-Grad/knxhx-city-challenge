@@ -1,8 +1,11 @@
 {% extends 'shared/base.html' %}
 
 {% block content %}
-
-    <h1>Add a New Neighborhood</h1>
+    <h3>City of Knoxville</h3>
+    </br>   
+    <h4>Add a New Neighborhood</h4>
+    </br>
+    
     <div class="row">
     <div class="col s12 m6">
     <div id="formContainer" class="card small">
@@ -15,7 +18,7 @@
         </fieldset>
         <fieldset>
             <label for="org_type">Organization Type: </label>
-            <select required name="org_type" id="org_type">
+            <select class="browser-default" required name="org_type" id="org_type">
                 <option value="" disabled selected>Select</option>
                 <option value="Homeowner Association">Homeowner Association</option>
                 <option value="Neighborhood Association">Neighborhood Association</option>
@@ -25,7 +28,7 @@
         </fieldset>
         <fieldset>
             <label for="boundary">Boundary: </label>
-            <select required name="boundary" id="boundary">
+            <select class="browser-default" required name="boundary" id="boundary">
                 <option value="" disabled selected>Select</option>
                 <option value="North">North</option>
                 <option value="South">South</option>
@@ -35,7 +38,7 @@
         </fieldset>
         <fieldset>
             <label for="district">District: </label>
-            <select required name="district" id="district">
+            <select class="browser-default" required name="district" id="district">
                 <option value="" disabled selected>Select</option>
                 <option value=1>1</option>
                 <option value=2>2</option>
@@ -79,7 +82,7 @@
             </fieldset>
             <fieldset>
                 <label for="day">Day: </label>
-                <select name="day" id="day">
+                <select class="browser-default" name="day" id="day">
                     <option value="Monday">Monday</option>
                     <option value="Tuesday">Tuesday</option>
                     <option value="Wednesday">Wednesday</option>
@@ -95,7 +98,7 @@
             </fieldset>
             <fieldset>
                 <label for="frequency">Frequency: </label>
-                <select required name="frequency" id="frequency">
+                <select class="browser-default" required name="frequency" id="frequency">
                     <option value="Monthly">Monthly</option>
                     <option value="Bi Monthly">Bi Monthly</option>
                     <option value="Quarterly">Quarterly</option>
