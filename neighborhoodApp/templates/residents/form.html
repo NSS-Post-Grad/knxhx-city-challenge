@@ -8,49 +8,57 @@
     </br>
     <h5>To {{ org.name }}:</h5>
     </br>
-
+    <div class="row">
+    <div class="col s12 m6">
     <form action="{% url 'neighborhoodApp:residents' %}" method="post">
         {% csrf_token %}
-
-        <fieldset>
-            <label for="first_name">First Name: </label>
-            <input required id="first_name" type="text" name="first_name">
-        </fieldset>
-        <fieldset>
-            <label for="last_name">Last Name: </label>
-            <input required id="last_name" type="text" name="last_name">
-        </fieldset>
-        <fieldset>
-            <label for="email">Email: </label>
-            <input required id="email" type="text" min="1" name="email">
-        </fieldset>
-        <fieldset>
-            <label for="phone">Phone Number: </label>
-            <input required id="phone" type="number" name="phone">
-        </fieldset>
-        <fieldset>
-            <label for="address_1">Address 1: </label>
-            <input required id="address_1" type="text" name="address_1">
-        </fieldset>
-        <fieldset>
-            <label for="address_2">Address 2: </label>
-            <input id="address_2" type="text" name="address_2">
-        </fieldset>
-        <fieldset>
-            <label for="city_state">City, State: </label>
-            <input required id="city_state" type="text" name="city_state" value="{{city_state}}">
-        </fieldset>
-        <fieldset>
-            <label for="zip_code">Zip Code: </label>
-            <input required id="zip_code" type="number" name="zip_code">
-        </fieldset>
+        <div class="row">
+            <div class="input-field col m6">
+                <label for="first_name">First Name </label>
+                <input required id="first_name" type="text" name="first_name">
+            </div>
+            <div class="input-field col m6">
+                <label for="last_name">Last Name </label>
+                <input required id="last_name" type="text" name="last_name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m6">
+                <label for="email">Email </label>
+                <input required id="email" type="email" min="1" class="validate" name="email">
+                <span class="helper-text" data-error="Invalid Email"></span>
+            </div>
+            <div class="input-field col m6">
+                <label for="phone">Phone Number </label>
+                <input required id="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone" class="validate" placeholder="">
+                <span class="helper-text" data-error="Invalid Phone Number"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col m6">
+                <label for="address_1">Street Address </label>
+                <input required id="address_1" type="text" name="address_1">
+            </div>
+            <div class="input-field col m6">
+                <label for="address_2">Apt/PO Box </label>
+                <input id="address_2" type="text" name="address_2">
+            </div>
+            <div class="input-field col m6">
+                <label for="city_state">City, State </label>
+                <input required id="city_state" type="text" name="city_state" value="{{city_state}}">
+            </div>
+            <div class="input-field col m6">
+                <label for="zip_code">Zip Code </label>
+                <input required id="zip_code" type="number" name="zip_code">
+            </div>
+        </div>
         <input type="hidden" name="neighborhood_org_id" value={{org.id}}>
-        <fieldset>
-            <label for="organization_position">Organization Position: </label>
+        <div class="input-field">
+            <label for="organization_position">Organization Position </label>
             <input required id="organization_position" type="text" name="organization_position">
-        </fieldset>
-        <fieldset>
-            <p>Subscribe to Knoxville City newsletter?: </p>
+        </div>
+        <div>
+            <p>Subscribe to Knoxville City newsletter? </p>
             <br>
             <label for="yes">
             <input type="radio" id="yes" name="subscription" value="yes" checked>
@@ -61,17 +69,19 @@
             <input type="radio" id="no" name="subscription" value="no">
             <span>No</span>
             </label><br>
-        </fieldset>
+        </div>
         
         </br>
-        <input type="submit" value="Add" />
+        <input type="submit" class="btn amber darken-2" value="Add" />
+        <a href="{% url 'neighborhoodApp:neighborhood' org.id %}" class="btn amber darken-2">Cancel</a>
     </form>
-
-    <div class="cancel-button-container">
+    </div>
+    </div>
+    {% comment %} <div class="cancel-button-container">
         <form action="{% url 'neighborhoodApp:neighborhood' org.id %}" method="get">
             {% csrf_token %}
             <button type="submit">Cancel</button>
         <form>
-    </div>
+    </div> {% endcomment %}
 
 {% endblock content %}
