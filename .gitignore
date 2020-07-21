@@ -36,5 +36,3 @@ media/
 node_modules
 package-lock.json
 
-/mail_list.csv
-

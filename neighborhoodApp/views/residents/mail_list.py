@@ -11,19 +11,6 @@ def mail_list(request):
 
         mail = Resident.objects.filter(is_subscribed = True)
 
-        column_names = ['First Name', 'Last Name', 'Address', 'City/State', 'Zipcode']
-        rows = []
-
-        for row in mail:
-            rows.append([row.first_name, row.last_name, row.address_1, row.city_state, row.zip_code])
-
-        with open('mail_list.csv', mode='w') as mail_list_file:
-
-            csv_writer = csv.writer(mail_list_file)
-
-            csv_writer.writerow(column_names)
-            csv_writer.writerows(rows)
-
         template = 'residents/mail_list.html'
         context = {
             'mail': mail
@@ -38,7 +25,7 @@ def mail_list_csv(request):
         mail = Resident.objects.filter(is_subscribed = True)
 
         response = HttpResponse(content_type='text/csv')
-        response['Content-Disposition'] = 'attachment; filename="mail_list.csv'
+        response['Content-Disposition'] = 'attachment; filename="mailing_list.csv'
 
         writer = csv.writer(response)
 
