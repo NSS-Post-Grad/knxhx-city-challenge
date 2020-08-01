@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="{% static 'styles/base.css' %}" type="text/css" media="screen" />
     <link rel="stylesheet" href="{% static 'styles/nav.css' %}" type="text/css" media="screen" />
+    <link type="text/css" rel="stylesheet" href="{% static 'styles/materialize.min.css' %}"  media="screen,projection"/>
     {% block css %}
     {% endblock %}
 
@@ -16,6 +17,7 @@
 <body>
     <nav id="navContainer">
         <a href="{% url 'neighborhoodApp:home' %}"><img id="logo" src="{% static 'images/knoxlogo.png' %}" alt="logo"></a>
+        <div id="extraDiv">
         <div id="navLinkContainer">
             <a class="navLink" href="{% url 'neighborhoodApp:neighborhoods' %}">Neighborhood Directory</a>
             {% if user.is_authenticated %}
@@ -25,6 +27,7 @@
             {% else %}
                 <a class="navLink" href="{% url 'neighborhoodApp:login' %}">Admin Log In</a>
             {% endif %}    
+        </div>
         </div>
     </nav>
 
@@ -36,7 +39,7 @@
     {% block scripts %}
 
     {% endblock scripts %}
-
+<script type="text/javascript" src="{% static 'scripts/materialize.min.js' %}"></script>
 </body>
 
 </html>
