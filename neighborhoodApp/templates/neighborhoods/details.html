@@ -1,12 +1,12 @@
 {% extends 'shared/base.html' %}
 
 {% block content %}
-    <div><h1>City of Knoxville</h1></div>
+    <div><h3>City of Knoxville</h3></div>
     </br>
-    <div><h2>{{org.name}}</h2></div>
+    <div><h4>{{org.name}}</h4></div>
     </br>
     <div>
-        <h3>District {{org.district}} - {{org.boundary}}</h3>
+        <h5>District {{org.district}} - {{org.boundary}}</h5>
         </br>
         {% if request.user.is_authenticated %}
             <div>
@@ -17,7 +17,7 @@
             </br>
             <div>
                 {% for position in organization_positions %}
-                    <h3>{{position}}s:</h3>
+                    <h5>{{position}}s:</h5>
                     <ul>
                         {% for resident in residents %}
                             {% if resident.organization_position == position %}
@@ -30,7 +30,7 @@
             </br>
         {% endif %}
         <section>
-            <h3>Reach us at:</h3>
+            <h5>Reach us at:</h5>
             <p><a target="_blank" href="mailto:{{org.email}}">{{org.email}}</a></p>
             {% if org.website %}
                 <p><a href="{{org.website}}">{{org.website}}</a></p>
@@ -40,12 +40,12 @@
             {% endif %}
             {% if org.notes %}
                 </br>
-                <h3>Notes:</h3>
+                <h5>Notes:</h5>
                 <p>*{{org.notes}}</p>
             {% endif %}
             {% if org.is_active %}
             </br>
-            <h3>Meetings:</h3>
+            <h5>Meetings:</h5>
             <p>We also have regular meetings {{org.frequency}} every {{org.week}} {{org.day}} at {{org.time}} at <a href="https://www.google.com/maps/search/{{address}}+Knoxville+TN">{{org.location}}</a></p>
             <p>Come join us!</p>
             {% endif %}
