@@ -21,6 +21,7 @@ urlpatterns = [
     path('mailinglist/', mail_list, name='mailinglist'),
     path('neighborhood/form', neighborhood_form, name='neighborhood_form'),
     path('neighborhoods/<int:org_id>/resident_form', resident_form, name='resident_form'),
+    path('mailinglist/download_csv/mail_list.csv', mail_list_csv, name='mailinglist_csv'),
 ]
 
 

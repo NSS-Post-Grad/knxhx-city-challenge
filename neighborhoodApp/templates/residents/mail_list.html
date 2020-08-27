@@ -5,6 +5,11 @@
     </br>
     <div><h4>Newsletter Mailing List</h4></div>
     </br>
+    <form action="{% url 'neighborhoodApp:mailinglist_csv' %}" method="get">
+        {% csrf_token %}
+        <button type="submit">Download CSV</button>
+    </form>
+    </br>
     <div>
         <h5>Contacts:</h5>
         {% for resident in mail %}
